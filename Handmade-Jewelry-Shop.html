@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet's Lush - Make Your Style Shine With Our Jewelry</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config={
+            theme:{
+                extend:{
+                    colors:{
+                        primary:'#E69DB8',
+                        secondary:'#BE5985'
+                    },
+                    borderRadius:{
+                        'none':'0px',
+                        'sm':'4px',
+                        DEFAULT:'8px',
+                        'md':'12px',
+                        'lg':'16px',
+                        'xl':'20px',
+                        '2xl':'24px',
+                        '3xl':'32px',
+                        'full':'9999px',
+                        'button':'8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+            background-clip: url('https://readdy.ai/api/search-image?query=Elegant%2520jewelry%2520background%2520with%2520soft%2520pink%2520gradient%2520on%2520the%2520left%2520side%2520transitioning%2520to%2520a%2520clean%2520white%2520space%2520on%2520the%2520right.%2520The%2520left%2520side%2520has%2520subtle%2520sparkles%2520and%2520diamond%2520shapes%252C%2520while%2520the%2520right%2520side%2520features%2520a%2520beautiful%2520arrangement%2520of%2520handmade%2520jewelry%2520pieces%2520including%2520necklaces%252C%2520earrings%252C%2520and%2520bracelets%2520with%2520gemstones.&width=1280&height=600&seq=hero1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        input:focus {
+            outline: none;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .custom-checkbox {
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 2px solid #e83e8c;
+            border-radius: 4px;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid #e83e8c;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #e83e8c;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-3xl font-['Pacifico'] text-primary">Velvet's Lush</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Home</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Shop</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Collections</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">About</a>
+                <a href="#" class="text-gray-800 hover:text-primary font-medium">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="ri-search-line text-gray-700 ri-lg"></i>
+                </div>
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <i class="ri-user-line text-gray-700 ri-lg"></i>
+                </div>
+                <div class="w-10 h-10 flex items-center justify-center relative">
+                    <i class="ri-shopping-bag-line text-gray-700 ri-lg"></i>
+                    <span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                </div>
+                <div class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line text-gray-700 ri-lg"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 relative">
+        <div class="container mx-auto px-4 flex items-center h-[500px]">
+            <div class="w-full md:w-1/2 z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">Make Your Style Shine With Our Unique Jewelry</h1>
+                <p class="text-white text-lg mb-8">Discover handcrafted pieces that tell your story and elevate your personal style.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-white text-primary px-8 py-3 font-semibold !rounded-button whitespace-nowrap hover:bg-gray-100 transition">Shop Now</button>
+                    <button class="bg-transparent border-2 border-white text-white px-8 py-3 font-semibold !rounded-button whitespace-nowrap hover:bg-white/10 transition">Explore Collections</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Collections</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded shadow-md overflow-hidden group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Elegant%2520necklace%2520collection%2520with%2520various%2520pendant%2520styles%2520featuring%2520gemstones%2520in%2520silver%2520and%2520gold%2520settings%252C%2520arranged%2520beautifully%2520on%2520a%2520light%2520pink%2520marble%2520surface%2520with%2520soft%2520lighting%2520and%2520subtle%2520sparkles%2520highlighting%2520the%2520craftsmanship%2520and%2520detail%2520of%2520each%2520handmade%2520piece.&width=600&height=400&seq=necklace1&orientation=landscape" 
+                             alt="Necklace Collection" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Necklaces</h3>
+                        <p class="text-gray-600 mb-4">Statement pieces that frame your face and enhance your neckline.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            View Collection
+                            <div class="w-6 h-6 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Beautiful%2520earring%2520collection%2520featuring%2520various%2520styles%2520including%2520studs%252C%2520hoops%252C%2520and%2520dangles%2520with%2520gemstones%2520and%2520pearls%252C%2520arranged%2520artistically%2520on%2520a%2520light%2520pink%2520marble%2520surface%2520with%2520soft%2520lighting%2520and%2520subtle%2520sparkles%2520highlighting%2520the%2520intricate%2520details%2520of%2520each%2520handmade%2520piece.&width=600&height=400&seq=earrings1&orientation=landscape" 
+                             alt="Earrings Collection" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Earrings</h3>
+                        <p class="text-gray-600 mb-4">From subtle studs to statement drops for every occasion.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            View Collection
+                            <div class="w-6 h-6 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Elegant%2520bracelet%2520and%2520ring%2520collection%2520featuring%2520various%2520styles%2520with%2520gemstones%2520in%2520silver%2520and%2520gold%2520settings%252C%2520arranged%2520beautifully%2520on%2520a%2520light%2520pink%2520marble%2520surface%2520with%2520soft%2520lighting%2520and%2520subtle%2520sparkles%2520highlighting%2520the%2520craftsmanship%2520and%2520detail%2520of%2520each%2520handmade%2520piece.&width=600&height=400&seq=bracelets1&orientation=landscape" 
+                             alt="Bracelets & Rings Collection" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bracelets & Rings</h3>
+                        <p class="text-gray-600 mb-4">Delicate pieces that add sparkle to your hands and wrists.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            View Collection
+                            <div class="w-6 h-6 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Bestsellers</h2>
+                <div class="bg-gray-100 rounded-full px-1 py-1 flex">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full !rounded-full whitespace-nowrap">All</button>
+                    <button class="px-6 py-2 text-gray-700 !rounded-full whitespace-nowrap">Necklaces</button>
+                    <button class="px-6 py-2 text-gray-700 !rounded-full whitespace-nowrap">Earrings</button>
+                    <button class="px-6 py-2 text-gray-700 !rounded-full whitespace-nowrap">Bracelets</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded shadow-sm group">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Bestseller</span>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="ri-heart-line text-gray-700"></i>
+                        </div>
+                        <img src="https://readdy.ai/api/search-image?query=Elegant%2520handmade%2520necklace%2520with%2520a%2520teardrop%2520moonstone%2520pendant%2520on%2520a%2520delicate%2520gold%2520chain%252C%2520photographed%2520on%2520a%2520light%2520pink%2520background%2520with%2520soft%2520lighting%2520that%2520highlights%2520the%2520stone%2527s%2520natural%2520blue%2520sheen%2520and%2520the%2520intricate%2520wire%2520wrapping%2520detail.&width=500&height=500&seq=product1&orientation=squarish" 
+                             alt="Moonstone Pendant Necklace" 
+                             class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform">
+                            <button class="w-full bg-white text-primary py-2 font-medium !rounded-button whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Moonstone Teardrop Pendant</h3>
+                        <div class="flex justify-between items-center">
+                            <p class="text-primary font-bold">$89.00</p>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-half-fill text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded shadow-sm group">
+                    <div class="relative overflow-hidden">
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="ri-heart-line text-gray-700"></i>
+                        </div>
+                        <img src="https://readdy.ai/api/search-image?query=Beautiful%2520handmade%2520gold%2520hoop%2520earrings%2520with%2520small%2520turquoise%2520beads%252C%2520photographed%2520on%2520a%2520light%2520pink%2520background%2520with%2520soft%2520lighting%2520that%2520highlights%2520the%2520intricate%2520craftsmanship%2520and%2520the%2520vibrant%2520blue%2520of%2520the%2520stones%2520against%2520the%2520warm%2520gold%2520metal.&width=500&height=500&seq=product2&orientation=squarish" 
+                             alt="Turquoise Hoop Earrings" 
+                             class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform">
+                            <button class="w-full bg-white text-primary py-2 font-medium !rounded-button whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Turquoise Beaded Hoops</h3>
+                        <div class="flex justify-between items-center">
+                            <p class="text-primary font-bold">$65.00</p>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded shadow-sm group">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full">New</span>
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="ri-heart-line text-gray-700"></i>
+                        </div>
+                        <img src="https://readdy.ai/api/search-image?query=Elegant%2520handmade%2520rose%2520quartz%2520bracelet%2520with%2520silver%2520chain%2520and%2520charm%2520details%252C%2520photographed%2520on%2520a%2520light%2520pink%2520background%2520with%2520soft%2520lighting%2520that%2520highlights%2520the%2520soft%2520pink%2520color%2520of%2520the%2520stones%2520and%2520the%2520intricate%2520silver%2520work%2520connecting%2520the%2520beads.&width=500&height=500&seq=product3&orientation=squarish" 
+                             alt="Rose Quartz Bracelet" 
+                             class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform">
+                            <button class="w-full bg-white text-primary py-2 font-medium !rounded-button whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Rose Quartz Charm Bracelet</h3>
+                        <div class="flex justify-between items-center">
+                            <p class="text-primary font-bold">$72.00</p>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-line text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded shadow-sm group">
+                    <div class="relative overflow-hidden">
+                        <div class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="ri-heart-line text-gray-700"></i>
+                        </div>
+                        <img src="https://readdy.ai/api/search-image?query=Beautiful%2520handmade%2520opal%2520ring%2520with%2520intricate%2520silver%2520setting%252C%2520photographed%2520on%2520a%2520light%2520pink%2520background%2520with%2520soft%2520lighting%2520that%2520highlights%2520the%2520colorful%2520fire%2520within%2520the%2520opal%2520and%2520the%2520detailed%2520metalwork%2520of%2520the%2520band%2520and%2520setting.&width=500&height=500&seq=product4&orientation=squarish" 
+                             alt="Opal Ring" 
+                             class="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform">
+                            <button class="w-full bg-white text-primary py-2 font-medium !rounded-button whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Opal Statement Ring</h3>
+                        <div class="flex justify-between items-center">
+                            <p class="text-primary font-bold">$95.00</p>
+                            <div class="flex">
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-half-fill text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-primary text-primary px-8 py-3 font-semibold !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Why Choose Our Jewelry</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">Every piece tells a story of craftsmanship, quality, and unique design that you won't find anywhere else.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded shadow-sm text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-hand-heart-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Handcrafted</h3>
+                    <p class="text-gray-600">Each piece is carefully made by hand with attention to every detail.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded shadow-sm text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-recycle-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sustainable</h3>
+                    <p class="text-gray-600">We use ethically sourced materials and eco-friendly practices.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded shadow-sm text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-fingerprint-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Unique Designs</h3>
+                    <p class="text-gray-600">One-of-a-kind pieces that reflect your individual style.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded shadow-sm text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-medal-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quality Materials</h3>
+                    <p class="text-gray-600">Premium gemstones and metals for lasting beauty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded shadow-md">
+                    <div class="flex mb-6">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I received so many compliments on my moonstone necklace! The craftsmanship is exceptional and it's become my everyday signature piece."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Emily Richardson</h4>
+                            <p class="text-gray-500 text-sm">New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded shadow-md">
+                    <div class="flex mb-6">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The custom bracelet I ordered for my sister's birthday was perfect. The attention to detail and the packaging made it feel so special and luxurious."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Olivia Martinez</h4>
+                            <p class="text-gray-500 text-sm">Austin, TX</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded shadow-md">
+                    <div class="flex mb-6">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-half-fill text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"These earrings are absolutely stunning and surprisingly lightweight. I can wear them all day without discomfort. Will definitely be ordering more!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sophia Williams</h4>
+                            <p class="text-gray-500 text-sm">Chicago, IL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Custom Orders -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Custom Designs Just For You</h2>
+                    <p class="text-gray-600 mb-6">Looking for something truly unique? We offer custom jewelry design services to bring your vision to life. Whether it's a special gift or a piece to commemorate a milestone, we'll work with you to create something meaningful.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>Personal consultation to understand your style</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>Custom design sketches and material options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>Handcrafted with care and attention to detail</span>
+                        </li>
+                    </ul>
+                    <button class="bg-primary text-white px-8 py-3 font-semibold !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Request Custom Design</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=Jewelry%2520designer%2520working%2520on%2520a%2520custom%2520piece%2520in%2520a%2520bright%2520studio%2520with%2520various%2520gemstones%252C%2520tools%252C%2520and%2520design%2520sketches%2520spread%2520out%2520on%2520a%2520workspace.%2520The%2520image%2520shows%2520hands%2520carefully%2520crafting%2520a%2520piece%2520of%2520jewelry%2520with%2520precision%2520tools%252C%2520with%2520beautiful%2520finished%2520pieces%2520visible%2520nearby.&width=600&height=500&seq=custom1&orientation=landscape" 
+                         alt="Custom Jewelry Design Process" 
+                         class="w-full h-auto rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-primary/5">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Community</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Subscribe to our newsletter for exclusive offers, new collection previews, and jewelry care tips.</p>
+            
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border-none !rounded-l-button focus:ring-2 focus:ring-primary/30">
+                <button class="bg-primary text-white px-6 py-3 font-semibold !rounded-r-button whitespace-nowrap hover:bg-primary/90 transition">Subscribe</button>
+            </div>
+            
+            <div class="mt-6 flex items-center justify-center">
+                <label class="custom-checkbox flex items-center">
+                    <input type="checkbox" class="hidden">
+                    <span class="checkmark"></span>
+                    <span class="ml-7">I agree to receive marketing emails and promotions</span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-['Pacifico'] mb-6">Velvet's Lush</h3>
+                    <p class="text-gray-400 mb-6">Handcrafted jewelry that tells your unique story and celebrates your individual style.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-pinterest-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">All Jewelry</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Necklaces</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Earrings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Bracelets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Rings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">About</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Story</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Materials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sustainability</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Customer Care</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Care Instructions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 mb-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Velvet's Lush. All rights reserved.</p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="w-8 h-5 flex items-center justify-center">
+                        <i class="ri-visa-fill text-gray-400"></i>
+                    </div>
+                    <div class="w-8 h-5 flex items-center justify-center">
+                        <i class="ri-mastercard-fill text-gray-400"></i>
+                    </div>
+                    <div class="w-8 h-5 flex items-center justify-center">
+                        <i class="ri-paypal-fill text-gray-400"></i>
+                    </div>
+                    <div class="w-8 h-5 flex items-center justify-center">
+                        <i class="ri-apple-fill text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuButton = document.querySelector('.ri-menu-line');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    // Mobile menu functionality would go here
+                    alert('Mobile menu clicked');
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom checkbox functionality
+            const checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    // Custom checkbox functionality
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add to cart buttons
+            const addToCartButtons = document.querySelectorAll('button:contains("Add to Cart")');
+            if (addToCartButtons.length) {
+                addToCartButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Add to cart functionality would go here
+                        alert('Product added to cart!');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
